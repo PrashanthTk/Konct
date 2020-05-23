@@ -4,15 +4,16 @@
 
 Translator.js is a JavaScript library built top on Google Speech-Recognition & Translation API to transcript and translate voice and text. It supports many locales and brings globalization in <a href="https://www.webrtc-experiment.com/">WebRTC</a>!
 
-<a href="https://www.webrtc-experiment.com/Translator/">
-    <img src="https://cdn.webrtc-experiment.com/images/Translator.js-intro-1.png" />
-</a>
+
 
 # How to use?
 
 ```html
 <script src="https://cdn.webrtc-experiment.com/Translator.js"> </script>
 ```
+Step 1. Go the cloned repo directory and run node server.js on the console/command line/bash
+Step 2. Open your web browser ( Google Chrome/Firefox) and access localhost server by typing https://loclahost:8080 in the search bar
+
 
 # Facing issues using in your own domain?
 
@@ -83,10 +84,11 @@ What you can do is either display translated text in chat-box; or use `speakText
 
 # `voiceToText`
 
+The main benefit is that this project can connect students who understand different languages to videos in english through translation
 This method allows you convert voice into text; whatever you speak is recognized using Google Speech-Recognition API; and converted into text using same API:
 
 ```javascript
-var convertMyVoiceIntoEnglish = 'en-US'; // select any language
+var convertMyVoiceIntoEnglish = 'en-US'; // Select any language for example Kannada or Hindi
 translator.voiceToText(function (text) {
     console.log('Your voice as text!', text);
     
@@ -174,10 +176,7 @@ It is really useful in text-chat apps!
 # Demo
 
 * https://www.webrtc-experiment.com/Translator/
-# Quick Run
 
-Step 1. Go the cloned repo directory and run node server.js on the console/command line/bash
-Step 2. Open your web browser ( Google Chrome/Firefox) and access localhost server by typing https://loclahost:8080 in the search bar
 
 # Future Work
 
