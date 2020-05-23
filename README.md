@@ -185,8 +185,4 @@ It is really useful in text-chat apps!
 
 # Languages Supported
 
-102+ languages are supported. Please check above demo link for the list.
-
-# License
-
-[Translator.js](https://github.com/muaz-khan/Translator) is released under [MIT licence](https://www.webrtc-experiment.com/licence/) . Copyright (c) [Muaz Khan](http://www.MuazKhan.com/).
+All Indian languages are supported to provide education during children without access to schools and classrooms. 
