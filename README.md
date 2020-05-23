@@ -1,6 +1,6 @@
 # [Translator.js](https://github.com/muaz-khan/Translator) | WebRTC Voice & Text Translator
 
-# Demo: https://www.webrtc-experiment.com/Translator/
+
 
 Translator.js is a JavaScript library built top on Google Speech-Recognition & Translation API to transcript and translate voice and text. It supports many locales and brings globalization in <a href="https://www.webrtc-experiment.com/">WebRTC</a>!
 
@@ -172,10 +172,6 @@ Both `textToSpeak` and `targetLanguage` are mandatory. Only `api_key` is optiona
 2. Educate from home through translating video material across various languages
 
 It is really useful in text-chat apps!
-
-# Demo
-
-* https://www.webrtc-experiment.com/Translator/
 
 
 # Future Work
