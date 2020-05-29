@@ -1,0 +1,34 @@
+<div ng-controller="ChatNavigationCtrl" class="container-fluid">
+
+    <!--Chat Rooms Column-->
+    <div id="chatRoomList" class="sidebar" ng-include="'views/fragments/userChatRooms.html'"></div>
+
+    <div ng-switch on="section">
+
+        <!--Chat Landing Page-->
+        <div ng-switch-when="home">
+            <div id="chatHomePage" class="right-column" ng-include="'views/fragments/chatHomePage.html'"></div>
+        </div>
+
+        <div ng-switch-when="allRooms">
+            <div id="chatRoomsList" class="right-column" ng-include="'views/fragments/chatRoomsList.html'"></div>
+        </div>
+
+        <div ng-switch-when="newRoom">
+            <div id="newChatRoomPanel" class="right-column" ng-include="'views/fragments/newChatRoom.html'"></div>
+        </div>
+
+        <!--Inside a chat room-->
+        <div ng-switch-when="room" class="middle-column">
+                <!--Chat Main Section-->
+                <chat-zone state="state" user="user" home="home()" get-light-model="getLightModel()"></chat-zone>
+
+                <!--Participants Column-->
+                <div id="chatParticipants" class="sidebar-right"
+                     ng-include="'views/fragments/chatParticipants.html'"></div>
+            <!--<div class="row container-fluid">-->
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>

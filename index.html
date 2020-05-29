@@ -57,7 +57,7 @@
         </style>
     </head>
 
-    <body>
+    <body ng-app="KonctChat">
                 
         <h2 style="text-align:center"> KONCT Conference </h2>
         <section class="experiment" style="text-align:center">
@@ -203,7 +203,52 @@
 
             <!--<a href="https://github.com/muaz-khan/Translator" class="fork-left"></a>-->
 
-            <footer>
+           
+            
+    <div class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavBarCtrl">
+            <div class="navbar-inner" >
+                <div class="container-fluid">
+                    <a class="navbar-brand">KonctChat</a>
+                    <ul class="nav navbar-nav hidden-xs hidden-sm">
+                        <li><a href="http://cassandra.apache.org/" target="_blank">powered by <strong>Apache Cassandra™</strong></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right logout" ng-if="user != null" ng-click="logout()">
+                        <li><a title="Sign Out"><i class="fa fa-sign-out fa-lg clickable"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert" ng-if="generalError!=null">
+                <button type="button" class="close" ng-click="closeAlert()">×</button>
+                {{generalError}}
+            </div>
+            <div class="alert alert-warning" role="alert" ng-if="generalMessage!=null">
+                <button type="button" class="close" ng-click="closeAlert()">×</button>
+                {{generalMessage}}
+            </div>
+        </div>
+        <div>
+            <div class="row" ng-view/>
+        </div>
+    </div>
+        <script src="bower_components/less/less.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+        <script src="bower_components/angular-spinner/spin.js"></script>
+        <script src="bower_components/sockjs-client/sockjs.js"></script>
+        <script src="bower_components/stomp-websocket/stomp.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/directives.js"></script>
+        <script src="scripts/filters.js"></script>
+        <script src="scripts/resources.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="scripts/controllers.js"></script>
+     <footer>
                 <p>
                     <a href="https://www.webrtc-experiment.com/">Multilingual Conferencing</a>
                     © <a href="https://www.youtube.com/channel/UCDaVbK0F5b7y4hgSZrTwZNg" rel="author" target="_blank">KONCT Video Project</a>
